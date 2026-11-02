@@ -1,0 +1,247 @@
+#
+
+# MARK: Others
+Language: Cpp
+BasedOnStyle: LLVM
+DisableFormat: false
+AttributeMacros: [__capability, __output, __unused]
+CommentPragmas: ""
+Cpp11BracedListStyle: true
+InsertNewlineAtEOF: true
+InsertTrailingCommas: None
+EnumTrailingComma: Remove
+ExperimentalAutoDetectBinPacking: false
+InsertBraces: false
+IntegerLiteralSeparator:
+  Binary: 0
+  Decimal: 3
+  Hex: -1
+KeepFormFeed: false
+LineEnding: LF
+NumericLiteralCase:
+  ExponentLetter: Leave
+  HexDigit: Upper
+  Prefix: Lower
+  Suffix: Upper
+BreakAdjacentStringLiterals: true
+PenaltyBreakAssignment: 100
+ReflowComments: Always
+SeparateDefinitionBlocks: Always
+SortIncludes:
+  Enabled: true
+SortUsingDeclarations: Lexicographic
+Standard: Latest
+UseCRLF: false
+UseTab: Never
+
+# MARK: Pointer alignment
+DerivePointerAlignment: false
+PointerAlignment: Left
+ReferenceAlignment: Left
+
+# MARK: Alignment
+AlignAfterOpenBracket: Align # true
+AlignArrayOfStructures: Left
+AlignConsecutiveDeclarations: None
+AlignConsecutiveAssignments: None
+AlignConsecutiveBitFields: AcrossComments
+AlignConsecutiveMacros: AcrossComments
+AlignConsecutiveShortCaseStatements:
+  Enabled: false
+AlignEscapedNewlines: LeftWithLastLine
+AlignOperands: AlignAfterOperator # true
+AlignTrailingComments:
+  OverEmptyLines: 0
+
+# MARK: Qualifier order
+QualifierAlignment: Custom
+QualifierOrder:
+  - volatile
+  - friend
+  - static
+  - constexpr
+  - inline
+  - type
+  - const
+  - restrict
+
+# MARK: Functions
+AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowBreakBeforeNoexceptSpecifier: OnlyWithParen
+
+# MARK: Allowing shorts & empty
+AllowShortBlocksOnASingleLine: Empty
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortCaseExpressionOnASingleLine: true
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortCompoundRequirementOnASingleLine: true
+AllowShortEnumsOnASingleLine: true
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: Inline
+AllowShortLoopsOnASingleLine: false
+AllowShortNamespacesOnASingleLine: false
+
+# Deprecated </
+# AllowAllConstructorInitializersOnNextLine: true
+# AlwaysBreakAfterDefinitionReturnType: None
+# AlwaysBreakAfterReturnType: None
+# AlwaysBreakTemplateDeclarations: "Yes"
+# />
+
+# Deprecated </
+# BinPackArguments: false
+# BinPackParameters: OnePerLine
+# />
+
+# MARK: packing
+BinPackLongBracedList: true
+PackConstructorInitializers: CurrentLine
+
+# MARK: Spacing
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceAroundPointerQualifiers: Both
+BitFieldColonSpacing: Both
+SpacesInAngles: Never
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: false
+SpaceAfterOperatorKeyword: false
+SpaceBeforeCaseColon: false
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeSquareBrackets: false
+SpacesInContainerLiterals: false
+SpaceBeforeParens: Custom
+SpacesBeforeTrailingComments: 1
+SpacesInLineCommentPrefix:
+  Minimum: 1
+  Maximum: -1 # To disable the maximum set it to -1, apart from that the maximum takes precedence over the minimum.
+SpaceBeforeParensOptions:
+  AfterOverloadedOperator: true
+  AfterControlStatements: true
+  AfterForeachMacros: true
+  AfterIfMacros: true
+  AfterNot: true
+  AfterPlacementOperator: true
+  AfterRequiresInClause: true
+  AfterRequiresInExpression: false
+  AfterFunctionDeclarationName: false
+  AfterFunctionDefinitionName: false
+  BeforeNonEmptyParentheses: false
+SpacesInParens: Custom
+SpacesInParensOptions:
+  ExceptDoubleParentheses: false
+  InConditionalStatements: false
+  InCStyleCasts: false
+  InEmptyParentheses: false
+  Other: false
+SpacesInSquareBrackets: false
+
+# MARK: Wrapping
+BracedInitializerIndentWidth: 4 # If unset or negative, ContinuationIndentWidth is used
+BreakBeforeBraces: Custom # Configure each individual brace in BraceWrapping.
+BraceWrapping: #| true => Allman #| false => K&R
+  AfterClass: true
+  AfterNamespace: true
+  AfterExternBlock: false
+  AfterControlStatement: MultiLine
+  AfterCaseLabel: false
+  AfterEnum: false
+  AfterFunction: false
+  AfterObjCDeclaration: false
+  AfterStruct: false
+  AfterUnion: false
+  BeforeCatch: false
+  BeforeElse: false
+  BeforeLambdaBody: false
+  BeforeWhile: false
+
+  # Splitting empty things
+  SplitEmptyFunction: false
+  SplitEmptyNamespace: false
+  SplitEmptyRecord: false
+
+  IndentBraces: false
+
+# MARK: breaking
+AlwaysBreakBeforeMultilineStrings: false
+BreakAfterAttributes: Always
+BreakAfterReturnType: Automatic # This is deprecated. See Automatic below.
+BreakBeforeBinaryOperators: All
+BreakBeforeConceptDeclarations: Always
+BreakBeforeInlineASMColon: Always
+BreakBeforeTemplateCloser: false
+BreakBeforeTernaryOperators: true
+BreakBinaryOperations: Never
+BreakConstructorInitializers: BeforeColon
+BreakFunctionDefinitionParameters: false
+BreakInheritanceList: AfterComma
+BreakStringLiterals: true
+BreakTemplateDeclarations: "Yes"
+RequiresClausePosition: OwnLine
+
+# Deprecated </
+# ConstructorInitializerAllOnOneLineOrOnePerLine: false
+# />
+
+# MARK: Empty lines
+EmptyLineAfterAccessModifier: Never
+EmptyLineBeforeAccessModifier: Always
+KeepEmptyLines:
+  AtStartOfBlock: false
+  # AtEndOfBlock: false (not supported?)
+  AtStartOfFile: false
+  AtEndOfFile: false
+MaxEmptyLinesToKeep: 2
+
+# MARK: Namespaces
+CompactNamespaces: true
+FixNamespaceComments: true
+ShortNamespaceLines: 8
+WrapNamespaceBodyWithEmptyLines: Never
+
+# MARK: Preprocessor
+ForEachMacros: [RANGES_FOR, FOREACH]
+IfMacros: [IF]
+IncludeBlocks: Merge
+TypenameMacros: [STACK_OF, LIST]
+SkipMacroDefinitionBody: false
+StatementAttributeLikeMacros:
+  - Q_EMIT
+StatementMacros:
+  - Q_UNUSED
+  - QT_REQUIRE_VERSION
+WhitespaceSensitiveMacros: [STRINGIZE, PP_STRINGIZE]
+
+# MARK: Tab & limits
+AccessModifierOffset: -2
+ColumnLimit: 90
+ConstructorInitializerIndentWidth: 2
+ContinuationIndentWidth: 2
+IndentWidth: 4
+TabWidth: 4
+PPIndentWidth: -1 # When set to -1 (default) IndentWidth is used also for preprocessor statements.
+
+# MARK: Indentation
+IndentAccessModifiers: false
+IndentExportBlock: false
+IndentExternBlock: Indent
+IndentPPDirectives: BeforeHash
+NamespaceIndentation: All
+LambdaBodyIndentation: Signature
+IndentCaseBlocks: true
+IndentCaseLabels: true
+IndentGotoLabels: false
+IndentRequires: true
+IndentRequiresClause: true
+IndentWrappedFunctionNames: true
+RequiresExpressionIndentation: OuterScope
+
+# MARK: Removing
+RemoveEmptyLinesInUnwrappedLines: true
+RemoveParentheses: Leave
+RemoveBracesLLVM: false
+RemoveSemicolon: false
