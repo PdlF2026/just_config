@@ -14,7 +14,8 @@ CompileFlags:
     - "-Wmismatched-new-delete"
     - "-isystem"
     - "C:/DEV/SDKs/abseil/include"
-  Compiler: your_compiler_path # TODO: edit to write the correct path
+  # CompilationDatabase: Ancestors # ERROR: Matches multiple schemas when only one must validate.
+  Compiler: C:\\DEV\\SDKs\\llvmMinGW\\compiler\\bin\\clang++
   BuiltinHeaders: QueryDriver
 Index:
   Background: Build
@@ -29,7 +30,11 @@ Diagnostics:
         bugprone-*,
         concurrency-*,
         cppcoreguidelines-*,
+        fuchsia-statically-constructed-objects,
+        google-build-namespaces,
+        google-global-names-in-headers,
         google-build-using-namespace,
+        google-runtime-operator,
         llvm-header-guard,
         llvm-include-order,
         llvm-prefer-isa-or-dyn-cast-in-conditionals,
