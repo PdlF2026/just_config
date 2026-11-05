@@ -14,7 +14,7 @@ CompileFlags:
     - "-Wmismatched-new-delete"
     - "-isystem"
     - "C:/DEV/SDKs/abseil/include"
-  Compiler: C:\\DEV\\SDKs\\llvmMinGW\\compiler\\bin\\clang++
+  Compiler: your_compiler_path # TODO: edit to write the correct path
   BuiltinHeaders: QueryDriver
 Index:
   Background: Build
